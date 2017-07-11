@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div>
+        <h1 translate="TITLE_HOME"> </h1>
+    </div>
+    <div id="navbar-vertical"></div>
+    <div class="row">
+        <a ui-sref=".change"><button class="btn btn-lg btn-primary">cambiar body</button></a>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <div ui-view="navbar"></div>
+        </div>
+        <div>
+            <div ui-view="body"></div>
+        </div>
+    </div>
+</body>
+
+</html>
