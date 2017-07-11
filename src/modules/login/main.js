@@ -1,5 +1,4 @@
 var angular = require('angular');
-var router = require('angular-ui-router');
 
 /**
  * @ngdoc overview
@@ -15,8 +14,7 @@ var router = require('angular-ui-router');
 
 module.exports = angular.module('app.login', [
     require('angular-sanitize'),
-    require('angular-translate'),
-    router.default
+    require('angular-translate')
 ]).config(['$stateProvider', '$translateProvider', 'localeProvider', function($stateProvider, $translateProvider, localeProvider) {
 
     /***** i18n Configuration *****/

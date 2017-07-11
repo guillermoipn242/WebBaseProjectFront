@@ -13,7 +13,6 @@ var angular = require('angular');
 
 
 module.exports = angular.module('app.main', [
-    'ui.router',
     require('angular-sanitize'),
     require('angular-translate')
 ]).config(['$stateProvider', '$translateProvider','localeProvider', function($stateProvider, $translateProvider,localeProvider) {

@@ -1,10 +1,10 @@
 var angular = require('angular');
-var router = require('angular-ui-router');
+
 /* Modules for bootstrap */
 require('bootstrap-webpack!../conf/bootstrap.config.js');
 var $ = require('jquery');
 
-$(function() {
+/*$(function() {
     var $header = $('#header');
     $('#nav').affix({
         offset: {
@@ -13,7 +13,7 @@ $(function() {
             }
         }
     });
-});
+});*/
 
 
 /**
@@ -31,7 +31,7 @@ var app = angular.module('app', [
     require('angular-material'),
     require('angular-translate'),
     require('angular-sanitize'),
-    router.default
+    require('angular-ui-router').default
 ].concat(getModuleDependencies()));
 
 app.config(['$stateProvider',
@@ -65,7 +65,6 @@ app.config(['$stateProvider',
  */
 
 function getModuleDependencies() {
-    console.log("Before load modules");
     var moduleDep = [];
     var loadModules = require.context('./modules/', true, /main.js$/);
     for (var i = 0; i < loadModules.keys().length; i++) {
