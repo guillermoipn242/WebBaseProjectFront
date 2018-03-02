@@ -65,13 +65,13 @@ app.config(['$stateProvider',
  */
 
 function getModuleDependencies() {
-    var moduleDep = [];
+    var moduleDependency = [];
     var loadModules = require.context('./modules/', true, /main.js$/);
     for (var i = 0; i < loadModules.keys().length; i++) {
-        moduleDep.push(loadModules(loadModules.keys()[i]).name);
+        moduleDependency.push(loadModules(loadModules.keys()[i]).name);
         console.log((loadModules.keys()[i]).name);
     }
-    return moduleDep;
+    return moduleDependency;
 }
 
 //require('./css/index.scss');
